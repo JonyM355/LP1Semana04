@@ -11,17 +11,24 @@ namespace BetterDecorador
         /// <param name="args"></param>
         private static void Main(string[] args)
         {
+            if (args.Length > 0)
+            {
+                //phrase we want
+                string phrase = args[0];
 
-            //phrase we want
-            string phrase = args[0];
+                //Character we want (convert)
+                char c = Convert.ToChar(args[1]);
 
-            //Character we want (convert)
-            char c = Convert.ToChar(args[1]);
+                //How many times we want (convert)
+                int quantity = Convert.ToInt32(args[2]);
 
-            //How many times we want (convert)
-            int quantity = Convert.ToInt32(args[2]);
+                Console.WriteLine(Decor(phrase, c, quantity));
+            }
 
-            Console.WriteLine(Decor(phrase, c, quantity));
+            else
+            {
+                Console.WriteLine(Decor());
+            }
 
         }
 
@@ -51,6 +58,16 @@ namespace BetterDecorador
                 }
             }
             return str;
+        }
+
+
+        /// <summary>
+        /// If the user doesn't specify the arguments
+        /// </summary>
+        /// <returns></returns>
+        private static string Decor()
+        {
+            return Decor($"User did not specify args!", Convert.ToChar("="), 3);
         }
     }
 }
