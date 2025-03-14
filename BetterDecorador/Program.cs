@@ -5,6 +5,10 @@ namespace BetterDecorador
 {
     public class Program
     {
+        /// <summary>
+        /// Receives the arguments from the dotnet run command
+        /// </summary>
+        /// <param name="args"></param>
         private static void Main(string[] args)
         {
 
@@ -18,9 +22,17 @@ namespace BetterDecorador
             int quantity = Convert.ToInt32(args[2]);
 
             Console.WriteLine(Decor(phrase, c, quantity));
-            
+
         }
 
+        /// <summary>
+        /// Receives a string s , a char dec , and an int q
+        /// Show the char q times on the right and left of the string s
+        /// </summary>
+        /// <param name="s">The string </param>
+        /// <param name="dec"> The character to put on the right and left of the string </param>
+        /// <param name="q"> The number of times that the char dec will be put on each side of the string </param>
+        /// <returns>A string with the specified number q of char dec on each side of the string</returns>
         private static string Decor(string s, char dec, int q)
         {
             //new string
