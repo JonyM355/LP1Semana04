@@ -6,7 +6,7 @@ namespace BetterDecorador
     public class Program
     {
         /// <summary>
-        /// Receives the arguments from the dotnet run command
+        /// Receives the 3 arguments from the dotnet run command
         /// </summary>
         /// <param name="args"></param>
         private static void Main(string[] args)
